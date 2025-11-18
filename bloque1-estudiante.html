@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bloque 1 Estudiante | EVERYONE</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">EVERyONE</div>
+        <nav><a href="index.html">Inicio</a><a href="about.html">Sobre</a></nav>
+    </header>
+
+    <div class="container">
+        <h1>👩‍🎓 Bloque 1 – ¿Qué es la IA? (Estudiantes)</h1>
+
+        <div class="card">
+            <h2>La IA necesita 3 cosas para "aprender"</h2>
+            <ul style="font-size:1.2rem;">
+                <li><strong>Datos:</strong> como los ejemplos que te da el profe</li>
+                <li><strong>Algoritmos:</strong> las reglas para encontrar patrones</li>
+                <li><strong>Aprendizaje automático:</strong> mejorar sola con más práctica</li>
+            </ul>
+            <img src="assets/img/cerebro-vs-ia.png" alt="Cerebro vs IA"
+                style="width:100%; border-radius:12px; margin:1.5rem 0;">
+        </div>
+
+        <div class="card">
+            <h2>Tipos de IA que existen hoy</h2>
+            <p><strong>IA Débil:</strong> solo hace una cosa bien (Siri, traductor)</p>
+            <p><strong>IA Generativa:</strong> crea cosas nuevas (ChatGPT, imágenes con IA)</p>
+            <p><strong>IA General:</strong> aún no existe (sería como un humano)</p>
+        </div>
+
+        <div class="card game-box">
+            <h2 class="gold">🎮 Juego rápido</h2>
+            <p><strong>¿ChatGPT es IA Débil, Generativa o General?</strong></p>
+            <button
+                onclick="document.getElementById('res1').innerHTML='¡Correcto! 🎉 Es generativa porque crea textos nuevos.'; this.style.background='#16a34a'">Generativa</button>
+            <button
+                onclick="document.getElementById('res1').innerHTML='No, esa hace tareas muy específicas.'">Débil</button>
+            <button onclick="document.getElementById('res1').innerHTML='Aún no existe una así.'">General</button>
+            <p id="res1" style="margin-top:1rem; font-weight:bold;"></p>
+        </div>
+
+        <div class="card text-center">
+            <a href="bloque2-estudiante.html" class="btn btn-student">Siguiente: Bloque 2 →</a>
+        </div>
+    </div>
+</body>
+
+</html>

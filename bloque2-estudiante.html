@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bloque 2 Estudiante | EVERYONE</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">EVERyONE</div>
+        <nav><a href="index.html">Inicio</a><a href="about.html">Sobre</a></nav>
+    </header>
+
+    <div class="container">
+        <h1>👩‍🎓 Bloque 2 – Herramientas y tipos de IA (Estudiantes)</h1>
+
+        <div class="card">
+            <h2>Usos que te van a encantar</h2>
+            <ul style="font-size:1.2rem;">
+                <li>Resumir textos largos</li>
+                <li>Crear imágenes o presentaciones</li>
+                <li>Mejorar tu redacción</li>
+                <li>Generar ideas para trabajos</li>
+            </ul>
+        </div>
+
+        <div class="card text-center">
+            <h2 class="gold">Herramientas favoritas</h2>
+            <img src="assets/img/herramientas.png" alt="ChatGPT, Canva, Gemini, Copilot"
+                style="max-width:100%;border-radius:12px;">
+        </div>
+
+        <div class="card game-box">
+            <h2 class="gold">🎮 Juego: ¿Qué tipo de IA es?</h2>
+            <p>Canva Magic Studio (que crea imágenes) →</p>
+            <button onclick="res('¡Correcto! Es IA generativa 🎨')">Generativa</button>
+            <button onclick="res('No, esa solo hace una cosa muy concreta')">Débil</button>
+            <button onclick="res('Esa aún no existe')">General</button>
+            <p id="res2" style="margin-top:1rem;font-weight:bold;"></p>
+        </div>
+
+        <div class="card text-center">
+            <a href="bloque3-estudiante.html" class="btn btn-student">Siguiente: Bloque 3 (Ética) →</a>
+        </div>
+    </div>
+
+    <script>function res(txt) { document.getElementById('res2').innerHTML = txt; }</script>
+</body>
+
+</html>
