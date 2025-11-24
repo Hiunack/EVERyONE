@@ -3,29 +3,245 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sobre el proyecto | EVERYONE</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre el Proyecto | EVERYONE</title>
+    <link rel="icon" href="ico.png">
+    <link rel="stylesheet" href="assets/css/headergenerico.css">
+    <style>
+        /* Estilos base copiados de los bloques anteriores para consistencia */
+        :root {
+            --primary: #0b76ef;
+            --bg: #f5f7fa;
+            --card: #fff;
+            --text: #073048;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            background-image: url(estampado2.png);
+            background-size: 200px;
+            background-color: #f8fafc;
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav {
+            background-color: #0b76ef;
+            width: 100%;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+        }
+
+        h5 {
+            color: white;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        #logoeveryone {
+            width: 200px;
+            height: auto;
+            max-width: 300px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 1rem;
+            padding-top: 190px;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #063a82;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .list-style {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .list-style li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .list-style li::before {
+            content: '👉';
+            position: absolute;
+            left: 0;
+        }
+
+        .quote-box {
+            border-left: 5px solid #f7c948;
+            background: #fffbeb;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        /* Estilos para el video y enlaces */
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .btn-link {
+            background: #10b981;
+            padding: .6rem 1rem;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <div class="logo">EVERyONE</div>
-        <nav><a href="index.html">Inicio</a><a href="about.html">Sobre</a></nav>
+        <img id="logoeveryone" src="assets/img/logo.png.png" alt="Logo EVERYONE">
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <h5>|</h5>
+            <a href="about.html">Sobre el proyecto</a>
+        </nav>
     </header>
 
     <div class="container">
-        <h1 class="text-center">Sobre EVERyONE</h1>
-        <div class="card text-center">
-            <p style="font-size:1.3rem;">Proyecto educativo 100% gratuito y abierto creado en 2025 para que
-                <strong>todos</strong> aprendan a usar la IA de forma ética y responsable.</p>
-            <p>Creado con la colaboración de docentes, estudiantes y Grok 4 (xAI).</p>
-            <p><strong>Licencia MIT</strong> → Puedes copiarlo, modificarlo, usarlo en tu colegio o universidad sin
-                pedir permiso.</p>
-            <br>
-            <h2 class="gold">¡Compártelo libremente!</h2>
-            <p>GitHub: <a href="https://github.com/tu-usuario/EVERyONE"
-                    style="color:#0b76ef;">github.com/tu-usuario/EVERyONE</a></p>
+        <h1>ℹ️ Sobre el Proyecto EVERYONE</h1>
+
+        <div class="card">
+            <h2>Presentación del Proyecto</h2>
+
+            <p style="font-weight: bold;">EVERYONE es un portal web gratuito, abierto y adaptado para la formación ética
+                en Inteligencia Artificial de estudiantes y docentes.</p>
+
+            <h3>Video Pitch (Resumen)</h3>
+            <div class="video-responsive">
+                <iframe src="https://www.youtube.com/embed/fyfryloVhPo"
+                    title="Pitch de la propuesta de Aprendizaje Basado en Proyectos STEM" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="text-center">
+                <a href="https://hiunack.github.io/EVERyONE/" target="_blank" class="btn-link">
+                    🌐 Visitar el Proyecto en GitHub Pages
+                </a>
+            </div>
+
+            <div class="quote-box">
+                <p>❝ El alumnado aprenderá a hacer de la IA una aliada real y no una herramienta para copiar y pegar,
+                    mejorando su pensamiento crítico y evitando el plagio. ❞</p>
+                <p style="text-align: right; margin-top: -0.5rem; font-weight: bold;">– Propuesta del Equipo EVERYONE
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Misión, Visión y Valores</h2>
+
+            <h3>Misión</h3>
+            <p>Ser una plataforma educativa abierta y segura que brinde a estudiantes y docentes las herramientas y
+                normas éticas claras para integrar la Inteligencia Artificial de forma responsable y efectiva en el
+                proceso de enseñanza-aprendizaje.</p>
+
+            <h3>Visión</h3>
+            <p>Convertirnos en el recurso de referencia a nivel institucional y escolar para fomentar la integridad
+                académica, el pensamiento crítico y el uso de la IA como un verdadero aliado educativo.</p>
+
+            <h3>Valores</h3>
+            <ul class="list-style">
+                <li><strong>Transparencia:</strong> Promover la honestidad en el uso y citación de la IA.</li>
+                <li><strong>Accesibilidad:</strong> Ofrecer el contenido de forma 100% gratuita y adaptable a cualquier
+                    dispositivo.</li>
+                <li><strong>Responsabilidad:</strong> Enseñar el uso ético y la verificación de la información
+                    (anti-alucinaciones).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Objetivos del Programa</h2>
+
+            <h3>Objetivos Generales</h3>
+            <ul class="list-style">
+                <li>Proporcionar una guía clara y sólida sobre el uso ético de la IA en el ámbito educativo.</li>
+                <li>Mejorar las competencias digitales y el pensamiento crítico de estudiantes y docentes en el contexto
+                    de la IA generativa.</li>
+            </ul>
+
+            <h3>Objetivos Específicos</h3>
+            <ul class="list-style">
+                <li>Capacitar a los estudiantes para utilizar la IA como un asistente ("Human-in-the-Loop") y evitar el
+                    plagio.</li>
+                <li>Ofrecer a los docentes normas y contenidos pedagógicos para la gestión y evaluación de trabajos
+                    asistidos por IA.</li>
+                <li>Promover la verificación de fuentes para combatir las "alucinaciones" de la IA.</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top:1rem;">
+            <a class="btn-student" href="index.html"
+                style="background: #063a82; padding: .8rem 1.2rem; color: white; border-radius: 10px; text-decoration: none; font-weight: 600;">←
+                Volver al Inicio</a>
         </div>
     </div>
 </body>

@@ -5,49 +5,333 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bloque 2 Estudiante | EVERYONE</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="ico.png">
+    <link rel="stylesheet" href="assets/css/headergenerico.css">
+    <style>
+        :root {
+            --primary: #0b76ef;
+            --bg: #f5f7fa;
+            --card: #fff;
+            --text: #073048;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            background-image: url(estampado2.png);
+            background-size: 200px;
+            background-color: #f8fafc;
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav {
+            background-color: #0b76ef;
+            width: 100%;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+        }
+
+        h5 {
+            color: white;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        #logoeveryone {
+            width: 200px;
+            height: auto;
+            max-width: 300px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 1rem;
+            padding-top: 190px;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #063a82;
+        }
+
+        .btn-student {
+            background: #0b76ef;
+            padding: .8rem 1.2rem;
+            color: white;
+            border-radius: 10px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Estilos del Quiz */
+        .quiz-card {
+            background: #f5f8ff;
+            border-left: 6px solid #0b76ef;
+            padding: 18px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+        }
+
+        .quiz-card h3 {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .quiz-card label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Estilos para resultados */
+        .respuesta-correcta {
+            background-color: #d4edda;
+            border-color: #10b981;
+        }
+
+        .respuesta-incorrecta {
+            background-color: #f8d7da;
+            border-color: #f87171;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <div class="logo">EVERyONE</div>
-        <nav><a href="index.html">Inicio</a><a href="about.html">Sobre</a></nav>
+        <img id="logoeveryone" src="assets/img/logo.png.png" alt="Logo EVERYONE">
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <h5>|</h5>
+            <a href="about.html">Sobre el proyecto</a>
+        </nav>
     </header>
 
     <div class="container">
-        <h1>👩‍🎓 Bloque 2 – Herramientas y tipos de IA (Estudiantes)</h1>
+        <h1>👩‍🎓 Bloque 2 – Herramientas y Prompting Básico</h1>
 
-        <div class="card">
-            <h2>Usos que te van a encantar</h2>
-            <ul style="font-size:1.2rem;">
-                <li>Resumir textos largos</li>
-                <li>Crear imágenes o presentaciones</li>
-                <li>Mejorar tu redacción</li>
-                <li>Generar ideas para trabajos</li>
+        <section class="card">
+            <h2>🚀 La IA como tu Asistente Personal de Estudio</h2>
+            <p>La <strong>IA Generativa</strong> no es para que copies, ¡es para que pienses más rápido! Aquí tienes sus
+                usos principales y algunas herramientas:</p>
+            <ul style="font-size:1.1rem;">
+                <li><strong>Resumir:</strong> Para entender un texto largo en 3 minutos.</li>
+                <li><strong>Brainstorming:</strong> Para generar 10 ideas diferentes para tu próximo trabajo.</li>
+                <li><strong>Corrector de Estilo:</strong> Para mejorar tu redacción y ortografía (¡pero tú das la voz!).
+                </li>
+                <li><strong>Imágenes y Diseño:</strong> Para crear presentaciones o gráficos atractivos (Ej: Canva Magic
+                    Studio).</li>
             </ul>
-        </div>
+            <div class="text-center" style="margin-top:1.5rem;">
+                <img src="assets/img/herramientas.png" alt="ChatGPT, Canva, Gemini, Copilot"
+                    style="max-width:80%;border-radius:12px;">
+            </div>
+        </section>
 
-        <div class="card text-center">
-            <h2 class="gold">Herramientas favoritas</h2>
-            <img src="assets/img/herramientas.png" alt="ChatGPT, Canva, Gemini, Copilot"
-                style="max-width:100%;border-radius:12px;">
-        </div>
+        <section class="card">
+            <h2>🗣️ La clave del éxito: Hablarle Bien (Prompting)</h2>
+            <p>La IA es inteligente, pero te da una respuesta <strong>MALA</strong> si le das una instrucción
+                <strong>MALA</strong>. ¡Aprende a dar instrucciones como un Pro!</p>
 
-        <div class="card game-box">
-            <h2 class="gold">🎮 Juego: ¿Qué tipo de IA es?</h2>
-            <p>Canva Magic Studio (que crea imágenes) →</p>
-            <button onclick="res('¡Correcto! Es IA generativa 🎨')">Generativa</button>
-            <button onclick="res('No, esa solo hace una cosa muy concreta')">Débil</button>
-            <button onclick="res('Esa aún no existe')">General</button>
-            <p id="res2" style="margin-top:1rem;font-weight:bold;"></p>
-        </div>
+            <div
+                style="background:#e6f7ff; padding:1rem; border-left:4px solid var(--primary); border-radius:8px; margin-top:1rem;">
+                <strong>Prompt MALO:</strong> Dime sobre la Revolución Francesa.
+                <p style="font-size:0.9rem; margin-top:0.3rem;"><strong>Resultado:</strong> Un texto aburrido de
+                    Wikipedia.</p>
+            </div>
 
-        <div class="card text-center">
-            <a href="bloque3-estudiante.html" class="btn btn-student">Siguiente: Bloque 3 (Ética) →</a>
+            <div
+                style="background:#d4edda; padding:1rem; border-left:4px solid #10b981; border-radius:8px; margin-top:1rem;">
+                <strong>Prompt BUENO (El Super-Prompt):</strong> Actúa como un <strong>historiador</strong> que habla a
+                <strong>alumnos de secundaria</strong>. Explica las <strong>3 causas principales</strong> de la
+                Revolución Francesa en una lista y usa un <strong>tono divertido</strong>.
+                <p style="font-size:0.9rem; margin-top:0.3rem;"><strong>Resultado:</strong> Información organizada,
+                    interesante y fácil de entender. ¡Mucho mejor!</p>
+            </div>
+        </section>
+
+        <section class="card" id="evaluacion">
+            <h2>✅ Test Rápido: Usos de la IA Generativa (5 preguntas)</h2>
+            <p>Necesitas <strong>4 de 5 respuestas correctas</strong> para desbloquear el Bloque 3.</p>
+
+            <form id="quizForm">
+
+                <div class="quiz-card" id="quiz-q1">
+                    <h3>1. Si le pido a la IA que me haga un <strong>resumen</strong> de un capítulo, ¿estoy usándola
+                        bien?</h3>
+                    <label><input type="radio" name="q1" value="correct"> Sí, es un uso para ahorrar tiempo y
+                        estudiar.</label><br>
+                    <label><input type="radio" name="q1" value="wrong"> No, es mejor copiar el resumen de
+                        internet.</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q2">
+                    <h3>2. ¿Cuál es un <strong>uso incorrecto</strong> de la IA en tareas?</h3>
+                    <label><input type="radio" name="q2" value="wrong"> Pedirle ayuda para una lluvia de
+                        ideas.</label><br>
+                    <label><input type="radio" name="q2" value="correct"> Copiar el texto que genera y entregarlo sin
+                        cambiar nada.</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q3">
+                    <h3>3. ¿Qué hace un <strong>"Super-Prompt"</strong> (prompt bueno)?</h3>
+                    <label><input type="radio" name="q3" value="correct"> Le da a la IA instrucciones claras, tono y rol
+                        (ej. 'Actúa como...').</label><br>
+                    <label><input type="radio" name="q3" value="wrong"> Solo escribe una palabra corta (ej.
+                        'tarea').</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q4">
+                    <h3>4. ¿Qué tipo de IA usamos si queremos crear una imagen de un robot en el espacio?</h3>
+                    <label><input type="radio" name="q4" value="wrong"> IA Débil.</label><br>
+                    <label><input type="radio" name="q4" value="correct"> IA Generativa.</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q5">
+                    <h3>5. ¿Cuál es el principal beneficio de usar la IA para el estudiante?</h3>
+                    <label><input type="radio" name="q5" value="correct"> Acelerar el proceso de investigación y generar
+                        ideas.</label><br>
+                    <label><input type="radio" name="q5" value="wrong"> Sustituir al profesor.</label>
+                </div>
+
+                <div class="text-center" style="margin-top:.6rem;">
+                    <button type="button" class="btn-student" onclick="calificarQuiz()">Calificar Examen</button>
+                </div>
+            </form>
+
+            <div id="resultado" style="margin-top:1rem; font-weight:700;">
+            </div>
+            <div id="resultadoMensaje">
+            </div>
+        </section>
+
+
+        <div class="center" style="margin-top:1rem;">
+            <a class="btn-student" href="#" onclick="window.scrollTo({top:0, behavior:'smooth'})">Volver arriba</a>
         </div>
     </div>
 
-    <script>function res(txt) { document.getElementById('res2').innerHTML = txt; }</script>
+    <script>
+        function calificarQuiz() {
+            const respuestasCorrectas = {
+                q1: 'correct',
+                q2: 'correct',
+                q3: 'correct',
+                q4: 'correct',
+                q5: 'correct'
+            };
+            const totalPreguntas = 5;
+            const umbralAprobacion = 4; // 4 de 5 para aprobar (80%)
+
+            let score = 0;
+            const form = document.getElementById("quizForm");
+
+            // 1. Calificar y aplicar estilos
+            for (let i = 1; i <= totalPreguntas; i++) {
+                const qName = `q${i}`;
+                const quizCard = document.getElementById(`quiz-${qName}`);
+                const respuestaUsuario = form.querySelector(`input[name="${qName}"]:checked`);
+                const correcta = respuestasCorrectas[qName];
+
+                // Limpiar estilos anteriores
+                if (quizCard) {
+                    quizCard.classList.remove('respuesta-correcta', 'respuesta-incorrecta');
+
+                    // Resetear strong en todas las etiquetas
+                    quizCard.querySelectorAll('label strong').forEach(strong => {
+                        const parent = strong.parentElement;
+                        parent.innerHTML = parent.textContent; // Eliminar la etiqueta strong
+                    });
+                }
+
+                // Marcar la respuesta correcta con strong
+                if (quizCard) {
+                    const correctaLabel = quizCard.querySelector(`input[value="${correcta}"]`).parentElement;
+                    correctaLabel.innerHTML = `<strong>${correctaLabel.innerHTML}</strong>`;
+                }
+
+
+                if (respuestaUsuario) {
+                    if (respuestaUsuario.value === correcta) {
+                        score++;
+                        if (quizCard) quizCard.classList.add('respuesta-correcta');
+                    } else {
+                        if (quizCard) quizCard.classList.add('respuesta-incorrecta');
+                    }
+                }
+            }
+
+            // 2. Mostrar resultados
+            const resultadoDiv = document.getElementById('resultado');
+            const mensajeDiv = document.getElementById('resultadoMensaje');
+            const aprobado = score >= umbralAprobacion;
+
+            resultadoDiv.innerHTML = `
+                <p>Tu puntuación: <strong>${score} de ${totalPreguntas}</strong>.</p>
+                <p>Necesitas ${umbralAprobacion} para avanzar.</p>
+            `;
+
+            if (aprobado) {
+                mensajeDiv.innerHTML = `
+                    <p style="color: green; font-size:1.1rem;">¡Excelente! Tienes los conocimientos básicos. ¡Adelante con la Ética!</p>
+                    <div class="text-center" style="margin-top:1rem;">
+                        <a href="bloque3-estudiante.html" class="btn-student">Siguiente: Bloque 3 (Ética) →</a>
+                    </div>
+                `;
+            } else {
+                mensajeDiv.innerHTML = `
+                    <p style="color: red; font-size:1.1rem;">😢 ¡Sigue practicando! Revisa la información e inténtalo de nuevo para obtener ${umbralAprobacion} puntos.</p>
+                `;
+            }
+
+            // Mover el scroll hacia la sección de resultados
+            document.getElementById('evaluacion').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 
 </html>

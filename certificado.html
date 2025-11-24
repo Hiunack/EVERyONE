@@ -5,22 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Certificado | EVERYONE</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/headergenerico.css">
+    <link rel="icon" href="ico.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .centrar {
+            text-align: center;
+        }
+
+        header {
+            background-image: url(estampado2.png);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all .3s;
+            font-size: 1.2rem;
+        }
+
+        .btn-student {
+            background: #ffffff;
+            color: #0b76ef;
+        }
+
+        .btn-teacher {
+            background: #fbbf24;
+            color: #1e293b;
+        }
+
+        .btn:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <div class="logo">EVERyONE</div>
-        <nav><a href="index.html">Inicio</a></nav>
+        <img id="logoeveryone" src="assets/img/logo.png.png" alt="Logo EVERYONE">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <h5>|</h5>
+            <a href="about.html">Sobre el pryecto</a>
+        </nav>
     </header>
 
-    <div class="container text-center" style="padding:80px 20px;">
+    <div class="container centrar" style="padding:80px 20px;">
         <h1 style="color:#fbbf24;font-size:4rem;">¡Felicidades! 🎉</h1>
-        <p style="font-size:2rem;">Has completado el curso<br><strong>EVERyONE – Uso Ético y Responsable de la
+        <p style="font-size:2rem;">Has completado el curso<br><strong style="color: #0b76ef;">EVERY</strong><strong
+                style="color: #fbbf24;">O</strong><strong style="color: #0b76ef;">NE</strong><strong>
+                – Uso
+                Ético y
+                Responsable de la
                 IA</strong></p>
         <img src="assets/img/certificado.png" alt="Certificado"
             style="max-width:100%;max-height:600px;border:10px solid #fbbf24;border-radius:20px;margin:3rem 0;box-shadow:0 20px 40px rgba(0,0,0,0.2);">
         <br><br>
+
         <a href="assets/img/certificado.png" download class="btn btn-teacher"
             style="font-size:1.5rem;padding:1.2rem 3rem;">Descargar certificado</a>
     </div>

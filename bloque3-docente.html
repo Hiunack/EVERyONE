@@ -2,45 +2,548 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bloque 3 Docente | EVERYONE</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bloque 3 – Docentes | EVERYONE</title>
+    <link rel="icon" href="ico.png">
+    <link rel="stylesheet" href="assets/css/headergenerico.css">
+    <style>
+        :root {
+            --primary: #0b76ef;
+            --bg: #f5f7fa;
+            --card: #fff;
+            --text: #073048;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 1rem;
+            padding-top: 150px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #063a82;
+            margin: 0 0 .5rem 0;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.2rem;
+            box-shadow: 0 8px 24px rgba(11, 23, 52, 0.04);
+            margin-bottom: 1rem;
+        }
+
+        .muted {
+            color: #345;
+            font-size: .96rem;
+        }
+
+        ul {
+            margin-left: 1.1rem;
+        }
+
+        .note {
+            background: #fffbe6;
+            border-left: 4px solid #f7c948;
+            padding: .7rem;
+            border-radius: 8px;
+            margin-top: .6rem;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: #fff;
+            padding: .6rem .9rem;
+            border-radius: 10px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .quiz-card {
+            background: #f5f8ff;
+            border-left: 6px solid var(--primary);
+            padding: .9rem;
+            border-radius: 10px;
+            margin-bottom: .7rem;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        footer {
+            margin: 2rem 0;
+            text-align: center;
+            color: #567;
+            font-size: .9rem;
+        }
+
+        @media (max-width:640px) {
+            .container {
+                padding: .8rem;
+                padding-top: 140px;
+            }
+        }
+
+        header {
+            background-image: url(estampado2.png);
+        }
+
+        /* Estilos específicos del bloque 3 */
+        .etica-rule {
+            background: #e6f7ff;
+            border-left: 5px solid #0b76ef;
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            border-radius: 6px;
+        }
+
+        .etica-rule strong {
+            color: #063a82;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .planning-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            text-align: left;
+        }
+
+        .planning-table th,
+        .planning-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        .planning-table th {
+            background-color: #063a82;
+            color: white;
+            font-weight: 600;
+            width: 15%;
+            text-align: center;
+        }
+
+        /* Estilos para resultados de quiz */
+        .respuesta-correcta {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .respuesta-incorrecta {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+    </style>
+
 </head>
 
 <body>
+
     <header>
-        <div class="logo">EVERyONE</div>
-        <nav><a href="index.html">Inicio</a><a href="about.html">Sobre</a></nav>
+        <img id="logoeveryone" src="assets/img/logo.png.png" alt="Logo EVERYONE">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <h5>|</h5>
+            <a href="about.html">Sobre el pryecto</a>
+        </nav>
     </header>
 
     <div class="container">
         <h1>👨‍🏫 Bloque 3 – Guía ética y pedagógica</h1>
 
-        <div class="card">
-            <h2>Tus 4 reglas de oro como docente</h2>
-            <ul style="font-size:1.2rem;">
-                <li>Explicar siempre beneficios y riesgos</li>
-                <li>Definir reglas claras de uso en clase</li>
-                <li>Enseñar a verificar fuentes</li>
-                <li>Obligar a citar la IA en todo trabajo</li>
-            </ul>
-        </div>
+        <section class="card">
+            <h2>Propósito del bloque (docente)</h2>
+            <p class="muted">Establecer un marco de trabajo ético y pedagógico sólido para integrar la IA en el aula,
+                fomentando la transparencia, la integridad académica y el desarrollo del pensamiento crítico del
+                estudiante.</p>
+        </section>
 
-        <div class="card">
-            <h2>Ejemplo de norma para tu clase</h2>
+        <section class="card">
+            <h2>Integridad Académica: El "Human-in-the-Loop"</h2>
+            <p class="muted">La IA debe ser una herramienta de apoyo, no un sustituto. El rol del estudiante es
+                mantenerse en el ciclo de revisión y edición (**Human-in-the-Loop**).</p>
+
+            <div class="etica-rule">
+                <strong>1. Transparencia y Citación Obligatoria</strong>
+                <p>Todo trabajo asistido por IA debe citarse, incluso si se modificó. Esto fomenta la honestidad y
+                    permite evaluar el proceso, no solo el resultado.</p>
+            </div>
+
+            <div class="etica-rule">
+                <strong>2. Norma de Uso: Modificación Profunda</strong>
+                <p>Establece que el texto generado por IA debe ser *reescrito, verificado o complementado* por el
+                    alumno.
+                    Si el texto se copia directamente, se considera plagio (o "plagio de máquina").</p>
+            </div>
+
             <blockquote style="background:#fefce8;padding:1.5rem;border-left:5px solid #fbbf24;border-radius:8px;">
-                "Se permite usar IA como apoyo, pero todo texto generado debe ser reescrito con tus palabras y citado
-                así:<br>
-                <em>Fue generado con ayuda de Grok 4 (xAI, 2025) y modificado por mí.</em>"
+                <p><strong>Ejemplo de Citación en Tarea:</strong><br>
+                    "El borrador de la estructura fue generado con ayuda de Gemini (Google, 2024), y el contenido fue
+                    redactado, verificado y analizado por mí."
+                </p>
             </blockquote>
+        </section>
+
+        <section class="card">
+            <h2>Riesgos Éticos que Debes Enseñar</h2>
+
+            <div class="note" style="border-left: 4px solid #f87171; background:#fef2f2;">
+                <strong>Riesgo 1: Sesgo y Estereotipos (Bias)</strong>
+                <p>Los modelos de IA aprenden de datos históricos que pueden contener sesgos sociales, raciales o de
+                    género. Enséñales a reconocer y desafiar estos sesgos en la salida de la IA.</p>
+            </div>
+
+            <div class="note" style="border-left: 4px solid #60a5fa; background:#eff6ff;">
+                <strong>Riesgo 2: Veracidad y Alucinaciones</strong>
+                <p>La IA "alucina" inventando datos o fuentes que parecen reales. La habilidad fundamental es la
+                    **Verificación de Fuentes**.</p>
+            </div>
+
+            <div class="note" style="border-left: 4px solid #8b5cf6; background:#f5f3ff;">
+                <strong>Riesgo 3: Privacidad y Datos Sensibles</strong>
+                <p>Reitera la regla de oro: nunca ingresar información personal, calificaciones, o datos sensibles de
+                    la institución en modelos de IA abiertos.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Evolución Pedagógica: Del Contenido a las Preguntas</h2>
+
+            <div class="etica-rule" style="border-left: 5px solid #10b981; background:#ecfdf5;">
+                <strong>Foco Principal: Pensamiento Crítico</strong>
+                <p>Tu rol se mueve de ser el transmisor de información (que la IA puede encontrar) a ser el facilitador
+                    de preguntas. Diseña tareas que solo puedan resolverse con juicio humano, análisis y verificación.
+                </p>
+            </div>
+
+            <div class="etica-rule" style="border-left: 5px solid #10b981; background:#ecfdf5;">
+                <strong>Nueva Habilidad: Prompt Engineering</strong>
+                <p>Enseña a los estudiantes a ser "ingenieros de prompts". La calidad de su trabajo dependerá de la
+                    calidad de sus instrucciones a la máquina, una habilidad transferible al mundo laboral.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>💡 Prácticas Teórico-Pedagógicas Sugeridas</h2>
+            <p class="muted">Implementa estas actividades en tu clase para integrar los principios éticos y críticos de
+                la IA de manera planificada.</p>
+
+            <table class="planning-table">
+                <thead>
+                    <tr>
+                        <th>Tiempo Est.</th>
+                        <th>Concepto Central</th>
+                        <th>Actividad Sugerida (Rol Docente)</th>
+                        <th>Objetivo Específico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>15 min</th>
+                        <td><strong>Introducción Ética (Norma CERO)</strong></td>
+                        <td>
+                            * Presenta la regla de **Privacidad (No Datos Sensibles)** como la "Norma Cero".
+                            * Solicita a los alumnos identificar 3 ejemplos de datos que NUNCA subirían a una IA
+                            abierta.
+                        </td>
+                        <td>Establecer límites de seguridad digital inquebrantables antes de usar la herramienta.</td>
+                    </tr>
+                    <tr>
+                        <th>30 min</th>
+                        <td><strong>Detección de Sesgos (Bias)</strong></td>
+                        <td>
+                            * Pide a la IA que genere un "texto sobre un científico famoso" o "un líder empresarial".
+                            * El estudiante debe analizar el resultado e identificar posibles sesgos (género, etnia,
+                            país, etc.) y re-prompting para corregirlo.
+                        </td>
+                        <td>Entender que la IA no es neutral y desarrollar habilidades de lectura crítica de sus
+                            resultados.</td>
+                    </tr>
+                    <tr>
+                        <th>20 min</th>
+                        <td><strong>Verificación de Fuentes (Alucinación)</strong></td>
+                        <td>
+                            * Pide a la IA que cite tres fuentes para una afirmación histórica o científica.
+                            * El estudiante debe buscar esas fuentes en Google. Si las fuentes son falsas (alucinación),
+                            debe corregir a la IA con fuentes reales.
+                        </td>
+                        <td>Transformar la IA de una fuente final de información a una herramienta de apoyo que debe ser
+                            validada.</td>
+                    </tr>
+                    <tr>
+                        <th>45 min</th>
+                        <td><strong>Práctica de Citación (Human-in-the-Loop)</strong></td>
+                        <td>
+                            * Asigna un tema. Los estudiantes generan el ESQUEMA de un ensayo con IA.
+                            * Deben citar el esquema y luego escribir el contenido COMPLETO sin ayuda.
+                            * **Evaluación:** El peso recae en el contenido, pero se verifica la transparencia de la
+                            citación del esquema.
+                        </td>
+                        <td>Fomentar la transparencia y asegurar que el juicio, análisis y voz final sean humanos.</td>
+                    </tr>
+                    <tr>
+                        <th>40 min</th>
+                        <td><strong>Introducción al Prompt Engineering</strong></td>
+                        <td>
+                            * Presenta un prompt "malo" (Ej: "dame info del clima").
+                            * Pide a los alumnos que lo transformen en un "Super-Prompt" aplicando las 4 claves (Rol,
+                            Contexto, Formato, Restricción).
+                            * Comparar las salidas de la IA entre el prompt malo y el bueno.
+                        </td>
+                        <td>Enseñar que la calidad del pensamiento (prompt) dicta la calidad del resultado.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card" id="evaluacion">
+            <h2>Comprobación final — Doble Examen Ética y Pedagogía</h2>
+            <p class="muted">Debes obtener **4/5** en el Examen 1 y **4/5** en el Examen 2 para avanzar a la descarga
+                del certificado.</p>
+
+            <form id="quizForm">
+                <h3>📝 Examen 1: Opciones Múltiples (5 preguntas)</h3>
+
+                <div class="quiz-card" id="quiz-q1">
+                    <h3>1. ¿Cuál es la "Regla de Oro" respecto a la privacidad con la IA?</h3>
+                    <label><input type="radio" name="q1" value="a"> a) Usar solo IA de pago</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) Nunca ingresar datos sensibles de
+                        estudiantes</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) Citar a la IA en todos los trabajos</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q2">
+                    <h3>2. ¿Qué significa el concepto "Human-in-the-Loop"?</h3>
+                    <label><input type="radio" name="q2" value="a"> a) Que el estudiante solo debe copiar la salida de
+                        la IA</label><br>
+                    <label><input type="radio" name="q2" value="b"> b) Que el humano debe revisar, editar y validar la
+                        salida de la IA</label><br>
+                    <label><input type="radio" name="q2" value="c"> c) Que la IA debe diseñar el currículo</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q3">
+                    <h3>3. ¿Cuál es el riesgo ético principal de que la IA aprenda de datos históricos?</h3>
+                    <label><input type="radio" name="q3" value="a"> a) El riesgo de que se ralentice la IA</label><br>
+                    <label><input type="radio" name="q3" value="b"> b) El riesgo de Sesgo y Estereotipos
+                        (Bias)</label><br>
+                    <label><input type="radio" name="q3" value="c"> c) El riesgo de ser demasiado precisa</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q4">
+                    <h3>4. ¿Cuál es la nueva habilidad pedagógica fundamental que debe enseñar el docente en la era de
+                        la IA?</h3>
+                    <label><input type="radio" name="q4" value="a"> a) La Verificación de Fuentes y el Pensamiento
+                        Crítico</label><br>
+                    <label><input type="radio" name="q4" value="b"> b) Memorizar más datos que la IA</label><br>
+                    <label><input type="radio" name="q4" value="c"> c) Escribir solo borradores genéricos</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q5">
+                    <h3>5. ¿Por qué es obligatoria la citación de la IA, incluso si el texto fue modificado?</h3>
+                    <label><input type="radio" name="q5" value="a"> a) Para aumentar la longitud del trabajo</label><br>
+                    <label><input type="radio" name="q5" value="b"> b) Para fomentar la transparencia y evaluar el
+                        proceso</label><br>
+                    <label><input type="radio" name="q5" value="c"> c) Para evitar que la IA use el trabajo del
+                        alumno</label>
+                </div>
+
+                <hr style="margin: 2rem 0; border: 1px dashed #ccc;">
+
+                <h3>✅ Examen 2: Falso o Verdadero (5 preguntas)</h3>
+
+                <div class="quiz-card" id="quiz-q6">
+                    <h3>6. Las "alucinaciones" de la IA se refieren a que inventa datos o fuentes que parecen reales.
+                    </h3>
+                    <label><input type="radio" name="q6" value="v"> V</label><br>
+                    <label><input type="radio" name="q6" value="f"> F</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q7">
+                    <h3>7. Si un alumno copia el texto de la IA directamente en su trabajo, debe considerarse una falta
+                        a la integridad académica (plagio de máquina).</h3>
+                    <label><input type="radio" name="q7" value="v"> V</label><br>
+                    <label><input type="radio" name="q7" value="f"> F</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q8">
+                    <h3>8. El nuevo rol del docente es enfocarse en la transmisión de información, ya que la IA es una
+                        herramienta secundaria.</h3>
+                    <label><input type="radio" name="q8" value="v"> V</label><br>
+                    <label><input type="radio" name="q8" value="f"> F</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q9">
+                    <h3>9. La enseñanza de Prompt Engineering es una habilidad que prepara al estudiante para el mundo
+                        laboral.</h3>
+                    <label><input type="radio" name="q9" value="v"> V</label><br>
+                    <label><input type="radio" name="q9" value="f"> F</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q10">
+                    <h3>10. Los modelos de IA son completamente objetivos y no contienen sesgos.</h3>
+                    <label><input type="radio" name="q10" value="v"> V</label><br>
+                    <label><input type="radio" name="q10" value="f"> F</label>
+                </div>
+
+
+                <div class="center" style="margin-top:.6rem;">
+                    <button type="button" class="btn" onclick="calificarQuiz()">Calificar Exámenes</button>
+                </div>
+            </form>
+            <div id="Bloque">
+                <div id="resultado" style="margin-top:1rem; font-weight:700;">
+                </div>
+                <div id="resultadoMensaje">
+                </div>
+            </div>
+        </section>
+
+
+        <div class="center" style="margin-top:1rem;">
+            <a class="btn" href="#" onclick="window.scrollTo({top:0, behavior:'smooth'})">Volver arriba</a>
         </div>
 
-        <div class="card text-center" style="background:linear-gradient(135deg,#fffbeb,#fee2e2);">
-            <h2 class="gold">¡Ya estás listo para liderar el cambio!</h2>
-            <a href="certificado.html" class="btn btn-teacher">Descargar certificado de facilitador</a>
-        </div>
+
+        <footer>
+            Guía creada para docentes — adapta actividades a tu contexto y nivel. EVERYONE ©
+        </footer>
     </div>
+
+    <script>
+        function calificarQuiz() {
+            // Respuestas correctas para el BLOQUE 3 - Examen 1 (5 preguntas MC)
+            const respuestasExamen1 = {
+                q1: 'b', // Nunca ingresar datos sensibles de estudiantes (Privacidad)
+                q2: 'b', // Que el humano debe revisar, editar y validar (Human-in-the-Loop)
+                q3: 'b', // El riesgo de Sesgo y Estereotipos (Bias)
+                q4: 'a', // La Verificación de Fuentes y el Pensamiento Crítico
+                q5: 'b'  // Para fomentar la transparencia y evaluar el proceso (Citación)
+            };
+            const preguntasExamen1 = 5;
+            const umbralExamen1 = 4; // Mínimo 4/5 para aprobar el Examen 1 (80%)
+
+            // Respuestas correctas para el BLOQUE 3 - Examen 2 (5 preguntas F/V)
+            const respuestasExamen2 = {
+                q6: 'v', // Las "alucinaciones" se refieren a inventar datos.
+                q7: 'v', // Copiar directamente es plagio de máquina.
+                q8: 'f', // Falso. El nuevo rol es enfocarse en las preguntas y el juicio, no solo en la información.
+                q9: 'v', // Es una habilidad transferible.
+                q10: 'f' // Falso. Los modelos de IA contienen sesgos.
+            };
+            const preguntasExamen2 = 5;
+            const umbralExamen2 = 4; // Mínimo 4/5 para aprobar el Examen 2 (80%)
+
+            let score1 = 0;
+            let score2 = 0;
+
+            // Función genérica para calificar y marcar un set de preguntas
+            function calificarSet(respuestas, inicio) {
+                let score = 0;
+                const total = Object.keys(respuestas).length;
+
+                for (let i = 0; i < total; i++) {
+                    const qIndex = inicio + i;
+                    const qName = `q${qIndex}`;
+                    const respuestaCorrecta = respuestas[qName];
+                    const quizCard = document.getElementById(`quiz-${qName}`);
+                    const opciones = quizCard ? quizCard.querySelectorAll(`input[name="${qName}"]`) : [];
+                    let respuestaUsuario = null;
+
+                    // Limpiar estilos anteriores
+                    if (quizCard) {
+                        quizCard.classList.remove('respuesta-correcta', 'respuesta-incorrecta');
+                    }
+
+                    // Encontrar la respuesta seleccionada y marcar la correcta
+                    opciones.forEach(opcion => {
+                        opcion.parentElement.style.fontWeight = 'normal'; // Resetear negritas
+
+                        if (opcion.checked) {
+                            respuestaUsuario = opcion.value;
+                        }
+
+                        // Marcar la respuesta correcta en negrita
+                        if (opcion.value === respuestaCorrecta) {
+                            opcion.parentElement.style.fontWeight = 'bold';
+                        }
+                    });
+
+                    // Calificar y aplicar estilo a la tarjeta de la pregunta
+                    if (respuestaUsuario === respuestaCorrecta) {
+                        score++;
+                        if (quizCard) {
+                            quizCard.classList.add('respuesta-correcta');
+                        }
+                    } else if (respuestaUsuario !== null) {
+                        // Si seleccionó una respuesta incorrecta
+                        if (quizCard) {
+                            quizCard.classList.add('respuesta-incorrecta');
+                        }
+                    }
+                }
+                return score;
+            }
+
+            // 1. Calificar Examen 1 (preguntas 1 a 5)
+            score1 = calificarSet(respuestasExamen1, 1);
+
+            // 2. Calificar Examen 2 (preguntas 6 a 10)
+            score2 = calificarSet(respuestasExamen2, 6);
+
+            // 3. Mostrar el resultado final y la transición
+            const resultadoDiv = document.getElementById('resultado');
+            const mensajeDiv = document.getElementById('resultadoMensaje');
+
+            const aprobado1 = score1 >= umbralExamen1;
+            const aprobado2 = score2 >= umbralExamen2;
+            const aprobadoAmbos = aprobado1 && aprobado2;
+
+            let mensajeHTML = `
+                <p><strong>Examen 1 (Múltiple):</strong> ${score1} de ${preguntasExamen1} (Necesitas ${umbralExamen1}). ${aprobado1 ? '✅ Aprobado' : '❌ Reprobado'}</p>
+                <p><strong>Examen 2 (F/V):</strong> ${score2} de ${preguntasExamen2} (Necesitas ${umbralExamen2}). ${aprobado2 ? '✅ Aprobado' : '❌ Reprobado'}</p>
+            `;
+
+            if (aprobadoAmbos) {
+                mensajeHTML += '<p style="color: green; font-size:1.1rem;">¡Felicidades! Has aprobado todos los módulos. Estás listo para obtener tu Certificado. 🎉</p>';
+                // Enlace final al certificado
+                mensajeDiv.innerHTML = '<div class="center" style="margin-top:1rem;"><a href="certificado.html" class="btn">Descargar certificado de facilitador →</a></div>';
+            } else {
+                mensajeHTML += '<p style="color: red; font-size:1.1rem;">😢 Debes aprobar ambos exámenes (4/5 en cada uno) para avanzar. Por favor, revisa el material e inténtalo de nuevo.</p>';
+                mensajeDiv.innerHTML = ''; // Limpiar cualquier botón anterior
+            }
+
+            resultadoDiv.innerHTML = mensajeHTML;
+
+            // 4. Mover el scroll hacia la sección de resultados
+            document.getElementById('evaluacion').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
 </body>
 
 </html>

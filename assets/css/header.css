@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    margin: 0;
+
+}
+
+header {
+
+    background-image: url(estampado2.png);
+    background-size: 200px;
+    background-color: #f8fafc;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 0PX;
+
+}
+
+
+header nav {
+    background-color: #0b76ef;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: right;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #fbbf24;
+    ;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 8rem;
+
+
+
+}
+
+#logoeveryone {
+    width: 70%;
+    height: auto;
+    margin: 0px;
+    max-width: 300PX;
+
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 1vh;
+    width: 100%;
+}
+
+.estudoce {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 120px;
+}
+
+/* esto no afecta al index */
+h2 {
+    color: #0b76ef;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #fbbf24;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    margin: 2rem 0 1rem;
+}
+
+/* esto no afecta al index */
+h3 {
+    color: #1e293b;
+    margin: 1.5rem 0 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 2.8rem;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all .3s;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 200px;
+
+
+    margin: 10px;
+}
+
+.btn-student {
+    background: #ffffff;
+    color: #0b76ef;
+}
+
+.btn-teacher {
+    background: #fbbf24;
+    color: #1e293b;
+}
+
+.btn:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+
+footer {
+    background: #1e293b;
+    background-image: url(/assets/img/estampado2.png);
+    background-size: 200px;
+    color: white;
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 5rem;
+    width: 100%;
+}

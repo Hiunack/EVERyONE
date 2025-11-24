@@ -2,39 +2,501 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bloque 2 Docente | EVERYONE</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bloque 2 – Docentes | EVERYONE</title>
+    <link rel="icon" href="ico.png">
+    <link rel="stylesheet" href="assets/css/headergenerico.css">
+    <style>
+        :root {
+            --primary: #0b76ef;
+            --bg: #f5f7fa;
+            --card: #fff;
+            --text: #073048;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 1rem;
+            padding-top: 150px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #063a82;
+            margin: 0 0 .5rem 0;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.2rem;
+            box-shadow: 0 8px 24px rgba(11, 23, 52, 0.04);
+            margin-bottom: 1rem;
+        }
+
+        .muted {
+            color: #345;
+            font-size: .96rem;
+        }
+
+        ul {
+            margin-left: 1.1rem;
+        }
+
+        .two-cols {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            flex: 1;
+            min-width: 240px;
+        }
+
+        .note {
+            background: #fffbe6;
+            border-left: 4px solid #f7c948;
+            padding: .7rem;
+            border-radius: 8px;
+            margin-top: .6rem;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: #fff;
+            padding: .6rem .9rem;
+            border-radius: 10px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .quiz-card {
+            background: #f5f8ff;
+            border-left: 6px solid var(--primary);
+            padding: .9rem;
+            border-radius: 10px;
+            margin-bottom: .7rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: .6rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #e6eefc;
+            padding: .45rem;
+            text-align: left;
+            font-size: .95rem;
+        }
+
+        pre {
+            background: #eef6ff;
+            padding: .6rem;
+            border-radius: 8px;
+            overflow: auto;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        footer {
+            margin: 2rem 0;
+            text-align: center;
+            color: #567;
+            font-size: .9rem;
+        }
+
+        @media (max-width:640px) {
+
+            .container {
+                padding: .8rem;
+                padding-top: 140px;
+            }
+        }
+
+        header {
+            background-image: url(estampado2.png);
+        }
+
+        #definiciones img {
+            width: 100%;
+            margin-top: .6rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ESTILOS ADICIONALES PARA MOSTRAR RESULTADOS Y SEÑALAR RESPUESTAS */
+        .respuesta-correcta {
+            background-color: #d4edda;
+            /* Verde claro */
+            border-color: #c3e6cb;
+        }
+
+        .respuesta-incorrecta {
+            background-color: #f8d7da;
+            /* Rojo claro */
+            border-color: #f5c6cb;
+        }
+
+        #map {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(11, 23, 52, 0.1);
+            margin-top: .6rem;
+        }
+    </style>
+
 </head>
 
 <body>
+
     <header>
-        <div class="logo">EVERyONE</div>
-        <nav><a href="index.html">Inicio</a><a href="about.html">Sobre</a></nav>
+        <img id="logoeveryone" src="assets/img/logo.png.png" alt="Logo EVERYONE">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <h5>|</h5>
+            <a href="about.html">Sobre el pryecto</a>
+        </nav>
     </header>
 
     <div class="container">
         <h1>👨‍🏫 Bloque 2 – Aplicaciones prácticas en el aula</h1>
 
-        <div class="card">
+        <section class="card">
+            <h2>Propósito del bloque (docente)</h2>
+            <p class="muted">Explorar formas concretas y eficientes de integrar herramientas de **IA generativa** en la
+                planificación, diferenciación y evaluación del trabajo docente, mejorando la eficiencia y enfocando el
+                tiempo en la interacción con el alumno.</p>
+        </section>
+
+        <section class="card">
             <h2>Usos reales que puedes implementar mañana</h2>
             <ul style="font-size:1.2rem;">
-                <li>Generar actividades personalizadas</li>
-                <li>Crear rúbricas automáticas</li>
-                <li>Diseñar infografías y presentaciones</li>
-                <li>Corregir y dar feedback rápido</li>
+                <li>Generar **actividades personalizadas** (diferenciación).</li>
+                <li>Crear **rúbricas automáticas** y plantillas de evaluación.</li>
+                <li>Diseñar **infografías y presentaciones** atractivas.</li>
+                <li>Corregir y dar **feedback rápido** y constructivo (borradores).</li>
             </ul>
+        </section>
+
+        <section class="card">
+            <h2>Estrategias clave de 'Prompting' para la enseñanza</h2>
+
+            <div class="two-cols">
+                <div class="col">
+                    <h3>1. Definir el Rol y el Objetivo</h3>
+                    <p class="muted">La IA debe actuar como un "**asistente pedagógico**". Siempre empieza con un rol y
+                        una
+                        tarea específica.
+                    </p>
+                    <pre>Ejemplo: Actúa como experto en diseño de currículo. Genera 5 preguntas de nivel superior sobre la Revolución Francesa, alineadas al pensamiento crítico.</pre>
+                </div>
+                <div class="col">
+                    <h3>2. Proporcionar Contexto y Contenido</h3>
+                    <p class="muted">Dale a la IA el material que quieres que trabaje (un párrafo, una rúbrica, un
+                        estándar). **Evita prompts genéricos.**</p>
+                    <pre>Ejemplo: Con base en la siguiente tabla de datos [INSERTAR TEXTO], crea un resumen de 200 palabras para alumnos de 5to grado, usando analogías sencillas.</pre>
+                </div>
+            </div>
+
+            <div class="two-cols" style="margin-top:.6rem;">
+                <div class="col">
+                    <h3>3. Especificar el Formato de Salida</h3>
+                    <p class="muted">Indica exactamente cómo quieres la respuesta: una tabla, una lista, un texto de 10
+                        preguntas con 4 opciones (A, B, C, D).</p>
+                    <pre>Ejemplo: Convierte esta información en una tabla comparativa de tres columnas: 'Concepto', 'Definición para niños', 'Analogía cotidiana'.</pre>
+                </div>
+                <div class="col">
+                    <h3>4. Aplicar Restricciones (Tono y Nivel)</h3>
+                    <p class="muted">Define la audiencia y el tono: formal, motivador, simple, para un nivel de
+                        bachillerato, etc. Esto asegura la **diferenciación**.</p>
+                    <pre>Ejemplo: Revisa el ensayo del alumno [INSERTAR TEXTO] y dame feedback motivador, enfocándote solo en la estructura y el uso de conectores lógicos.</pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Herramientas y seguridad digital</h2>
+
+            <h3>Herramientas por función:</h3>
+            <ul>
+                <li>**Texto/Resumen/Ideas:** ChatGPT, Gemini, Copilot. (Para borradores, esquemas, planes)</li>
+                <li>**Imágenes/Diseño:** Midjourney, Canva Magic Studio, Adobe Firefly. (Para infografías, material
+                    visual)</li>
+                <li>**Presentaciones/Video:** Tome, Gamma, InVideo. (Para material dinámico)</li>
+            </ul>
+
+            <img id="map" src="assets/img/bloque2do/map.png" alt="">
+            <div class="note">
+                <strong>Recordatorio de Seguridad:</strong> **NUNCA** subas a una IA abierta: nombres completos de
+                estudiantes, números de identificación, o datos sensibles de la institución. **Anonimiza siempre** el
+                material que compartas.
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Actividad práctica — Creación de un "Asistente de Prompts"</h2>
+
+            <p class="muted">Esta actividad te ayudará a crear plantillas reutilizables de prompts de alta calidad para
+                el uso diario de la IA.</p>
+            <ol>
+                <li>**Fase 1: Identificación (10 min):** Piensa en tres tareas rutinarias que te consuman tiempo (e.g.,
+                    crear un examen, adaptar una lectura, generar una rúbrica).</li>
+                <li>**Fase 2: Diseño de Prompt (30 min):** Para una de las tareas elegidas, redacta un
+                    "**Super-Prompt**" que
+                    incluya los 4 elementos clave de prompting: Rol, Contexto, Formato y Restricciones.</li>
+                <li>**Fase 3: Ejecución y Refinamiento (10 min):** Prueba tu Super-Prompt en una herramienta de IA. Si
+                    la
+                    salida no es perfecta, **refórmulalo** (Estrategia 3R) hasta que cumpla tus expectativas.</li>
+            </ol>
+            <p class="muted">**Resultado esperado:** una plantilla de prompt de alta calidad que solo requiera cambiar
+                el
+                tema/contenido para ser reutilizada.</p>
+        </section>
+
+        <section class="card" id="evaluacion">
+            <h2>Comprobación de lectura — Doble Examen de Aplicaciones</h2>
+            <p class="muted">Debes obtener **4/5** en el Examen 1 y **4/5** en el Examen 2 para avanzar al Bloque 3.</p>
+
+            <form id="quizForm">
+                <h3>📝 Examen 1: Opciones Múltiples (5 preguntas)</h3>
+
+                <div class="quiz-card" id="quiz-q1">
+                    <h3>1. ¿Cuál es un beneficio principal de usar IA para la planificación docente?</h3>
+                    <label><input type="radio" name="q1" value="a"> a) Eliminar por completo el trabajo
+                        docente</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) Aumentar la burocracia</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) Mejorar la eficiencia y el tiempo dedicado a la
+                        interacción</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q2">
+                    <h3>2. ¿Cuál es la primera estrategia recomendada al escribir un prompt de calidad?</h3>
+                    <label><input type="radio" name="q2" value="a"> a) Generar 100 respuestas a la vez</label><br>
+                    <label><input type="radio" name="q2" value="b"> b) Definir el Rol y el Objetivo de la IA</label><br>
+                    <label><input type="radio" name="q2" value="c"> c) Escribir solo una palabra</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q3">
+                    <h3>3. Para lograr la diferenciación (personalización de actividades), ¿qué estrategia de prompting
+                        es esencial?</h3>
+                    <label><input type="radio" name="q3" value="a"> a) Usar el tono más formal posible</label><br>
+                    <label><input type="radio" name="q3" value="b"> b) Aplicar Restricciones (Tono y Nivel)
+                        específicos</label><br>
+                    <label><input type="radio" name="q3" value="c"> c) No dar contexto a la IA</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q4">
+                    <h3>4. Si necesitas que la respuesta de la IA sea una lista de 5 puntos clave sobre un tema, ¿qué
+                        estrategia de prompting usarías principalmente?</h3>
+                    <label><input type="radio" name="q4" value="a"> a) Proporcionar contexto genérico</label><br>
+                    <label><input type="radio" name="q4" value="b"> b) Especificar el Formato de Salida (lista de 5
+                        puntos)</label><br>
+                    <label><input type="radio" name="q4" value="c"> c) Definir un rol de estudiante</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q5">
+                    <h3>5. ¿Cuál es la práctica de seguridad crucial al usar IA con material de clase?</h3>
+                    <label><input type="radio" name="q5" value="a"> a) Compartir números de identificación con la
+                        IA</label><br>
+                    <label><input type="radio" name="q5" value="b"> b) Anonimizar siempre la información sensible de
+                        alumnos</label><br>
+                    <label><input type="radio" name="q5" value="c"> c) Usar solo herramientas gratuitas</label>
+                </div>
+
+                <hr style="margin: 2rem 0; border: 1px dashed #ccc;">
+
+                <h3>✅ Examen 2: Falso o Verdadero (5 preguntas)</h3>
+
+                <div class="quiz-card" id="quiz-q6">
+                    <h3>6. La IA generativa puede crear automáticamente rúbricas y plantillas de evaluación.</h3>
+                    <label><input type="radio" name="q6" value="v"> V</label><br>
+                    <label><input type="radio" name="q6" value="f"> F</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q7">
+                    <h3>7. Midjourney (herramienta de imágenes) es ideal para generar presentaciones dinámicas y videos
+                        para la clase.</h3>
+                    <label><input type="radio" name="q7" value="v"> V</label><br>
+                    <label><input type="radio" name="q7" value="f"> F</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q8">
+                    <h3>8. Es seguro subir el nombre completo de un estudiante a una IA abierta si es para generar un
+                        plan de estudios personalizado.</h3>
+                    <label><input type="radio" name="q8" value="v"> V</label><br>
+                    <label><input type="radio" name="q8" value="f"> F</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q9">
+                    <h3>9. El rol "experto en diseño de currículo" es un ejemplo de la estrategia "Definir el Rol y el
+                        Objetivo".</h3>
+                    <label><input type="radio" name="q9" value="v"> V</label><br>
+                    <label><input type="radio" name="q9" value="f"> F</label>
+                </div>
+
+                <div class="quiz-card" id="quiz-q10">
+                    <h3>10. La IA permite crear actividades personalizadas, lo cual facilita el principio de
+                        diferenciación en el aula.</h3>
+                    <label><input type="radio" name="q10" value="v"> V</label><br>
+                    <label><input type="radio" name="q10" value="f"> F</label>
+                </div>
+
+
+                <div class="center" style="margin-top:.6rem;">
+                    <button type="button" class="btn" onclick="calificarQuiz()">Calificar Exámenes</button>
+                </div>
+            </form>
+            <div id="Bloque">
+                <div id="resultado" style="margin-top:1rem; font-weight:700;">
+                </div>
+                <div id="resultadoMensaje">
+                </div>
+            </div>
+        </section>
+
+
+        <div class="center" style="margin-top:1rem;">
+            <a class="btn" href="#" onclick="window.scrollTo({top:0, behavior:'smooth'})">Volver arriba</a>
         </div>
 
-        <div class="card text-center">
-            <img src="assets/img/herramientas.png" alt="Herramientas IA" style="max-width:100%;border-radius:12px;">
-        </div>
 
-        <div class="card text-center">
-            <a href="bloque3-docente.html" class="btn btn-teacher">Siguiente: Bloque 3 (Ética y pedagogía) →</a>
-        </div>
+        <footer>
+            Guía creada para docentes — adapta actividades a tu contexto y nivel. EVERYONE ©
+        </footer>
     </div>
+
+    <script>
+        function calificarQuiz() {
+            // Respuestas correctas para el BLOQUE 2 - Examen 1 (5 preguntas)
+            const respuestasExamen1 = {
+                q1: 'c', q2: 'b', q3: 'b', q4: 'b', q5: 'b'
+            };
+            const preguntasExamen1 = 5;
+            const umbralExamen1 = 4; // Mínimo 4/5 para aprobar el Examen 1 (80%)
+
+            // Respuestas correctas para el BLOQUE 2 - Examen 2 (5 preguntas F/V)
+            const respuestasExamen2 = {
+                q6: 'v', q7: 'f', q8: 'f', q9: 'v', q10: 'v'
+            };
+            const preguntasExamen2 = 5;
+            const umbralExamen2 = 4; // Mínimo 4/5 para aprobar el Examen 2 (80%)
+
+            let score1 = 0;
+            let score2 = 0;
+
+            // Función genérica para calificar y marcar un set de preguntas
+            function calificarSet(respuestas, inicio) {
+                let score = 0;
+                const total = Object.keys(respuestas).length;
+
+                // Las IDs de las preguntas van de 'q(inicio)' a 'q(inicio + total - 1)'
+                for (let i = 0; i < total; i++) {
+                    const qIndex = inicio + i;
+                    const qName = `q${qIndex}`;
+                    const respuestaCorrecta = respuestas[qName];
+                    const quizCard = document.getElementById(`quiz-${qName}`);
+                    const opciones = quizCard ? quizCard.querySelectorAll(`input[name="${qName}"]`) : [];
+                    let respuestaUsuario = null;
+
+                    // Limpiar estilos anteriores
+                    if (quizCard) {
+                        quizCard.classList.remove('respuesta-correcta', 'respuesta-incorrecta');
+                    }
+
+                    // Encontrar la respuesta seleccionada y marcar la correcta
+                    opciones.forEach(opcion => {
+                        opcion.parentElement.style.fontWeight = 'normal'; // Resetear negritas
+
+                        if (opcion.checked) {
+                            respuestaUsuario = opcion.value;
+                        }
+
+                        // Marcar la respuesta correcta en negrita
+                        if (opcion.value === respuestaCorrecta) {
+                            opcion.parentElement.style.fontWeight = 'bold';
+                        }
+                    });
+
+                    // Calificar y aplicar estilo a la tarjeta de la pregunta
+                    if (respuestaUsuario === respuestaCorrecta) {
+                        score++;
+                        if (quizCard) {
+                            quizCard.classList.add('respuesta-correcta');
+                        }
+                    } else if (respuestaUsuario !== null) {
+                        // Si seleccionó una respuesta incorrecta
+                        if (quizCard) {
+                            quizCard.classList.add('respuesta-incorrecta');
+                        }
+                    }
+                }
+                return score;
+            }
+
+            // 1. Calificar Examen 1 (preguntas 1 a 5)
+            score1 = calificarSet(respuestasExamen1, 1);
+
+            // 2. Calificar Examen 2 (preguntas 6 a 10)
+            score2 = calificarSet(respuestasExamen2, 6);
+
+            // 3. Mostrar el resultado final y la transición
+            const resultadoDiv = document.getElementById('resultado');
+            const mensajeDiv = document.getElementById('resultadoMensaje');
+
+            const aprobado1 = score1 >= umbralExamen1;
+            const aprobado2 = score2 >= umbralExamen2;
+            const aprobadoAmbos = aprobado1 && aprobado2;
+
+            let mensajeHTML = `
+                <p><strong>Examen 1 (Múltiple):</strong> ${score1} de ${preguntasExamen1} (Necesitas ${umbralExamen1}). ${aprobado1 ? '✅ Aprobado' : '❌ Reprobado'}</p>
+                <p><strong>Examen 2 (F/V):</strong> ${score2} de ${preguntasExamen2} (Necesitas ${umbralExamen2}). ${aprobado2 ? '✅ Aprobado' : '❌ Reprobado'}</p>
+            `;
+
+            if (aprobadoAmbos) {
+                mensajeHTML += '<p style="color: green; font-size:1.1rem;">¡Felicidades! Has aprobado ambos exámenes. Estás listo para el Bloque 3. 🎉</p>';
+                mensajeDiv.innerHTML = '<div class="center" style="margin-top:1rem;"><a href="bloque3-docente.html" class="btn">Siguiente: Bloque 3 (Ética y pedagogía) →</a></div>';
+            } else {
+                mensajeHTML += '<p style="color: red; font-size:1.1rem;">😢 Debes aprobar ambos exámenes para avanzar al siguiente bloque. Por favor, revisa el material e inténtalo de nuevo.</p>';
+                mensajeDiv.innerHTML = ''; // Limpiar cualquier botón anterior
+            }
+
+            resultadoDiv.innerHTML = mensajeHTML;
+
+            // 4. Mover el scroll hacia la sección de resultados
+            document.getElementById('evaluacion').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
 </body>
 
 </html>

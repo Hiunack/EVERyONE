@@ -5,51 +5,403 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bloque 1 Estudiante | EVERYONE</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" href="ico.png">
+    <link rel="stylesheet" href="assets/css/headergenerico.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: #f5f7fa;
+            font-family: Inter, sans-serif;
+        }
+
+        header {
+            background-image: url(estampado2.png);
+            background-size: 200px;
+            background-color: #f8fafc;
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav {
+            background-color: #0b76ef;
+            width: 100%;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #fbbf24;
+        }
+
+        #logoeveryone {
+            width: 200px;
+            height: auto;
+            max-width: 300px;
+        }
+
+        h5 {
+            color: white;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 1rem;
+            padding-top: 190px;
+        }
+
+        /* Tarjetas */
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .steps {
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        .step {
+            flex: 1;
+            background: #f0f7ff;
+            padding: 12px;
+            border-radius: 12px;
+            border-left: 4px solid #0b76ef;
+            margin-top: 1rem;
+        }
+
+        /* Botones del juego */
+        .game-box button {
+            padding: .7rem 1rem;
+            margin-right: .5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            background: #0b76ef;
+            color: white;
+        }
+
+        .btn-student {
+            background: #0b76ef;
+            padding: .8rem 1.2rem;
+            color: white;
+            border-radius: 10px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #cerebro {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .centrar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #inicio {
+            flex-direction: column;
+        }
+
+        #inicio img {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        #fin img {
+            width: 100%;
+        }
+
+        ul li {
+            margin-bottom: 0.8rem;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <div class="logo">EVERyONE</div>
-        <nav><a href="index.html">Inicio</a><a href="about.html">Sobre</a></nav>
+        <img id="logoeveryone" src="assets/img/logo.png.png" alt="">
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <h5>|</h5>
+            <a href="about.html">Sobre el proyecto</a>
+        </nav>
     </header>
 
     <div class="container">
         <h1>👩‍🎓 Bloque 1 – ¿Qué es la IA? (Estudiantes)</h1>
 
+        <!-- NUEVA SECCIÓN INTEGRADA -->
+        <div id="inicio" class="card centrar">
+            <h2>🤖 ¿Qué es la Inteligencia Artificial?</h2>
+            <img src="assets/img/bloque1est/queesia.png" alt="">
+        </div>
+
         <div class="card">
-            <h2>La IA necesita 3 cosas para "aprender"</h2>
-            <ul style="font-size:1.2rem;">
-                <li><strong>Datos:</strong> como los ejemplos que te da el profe</li>
-                <li><strong>Algoritmos:</strong> las reglas para encontrar patrones</li>
-                <li><strong>Aprendizaje automático:</strong> mejorar sola con más práctica</li>
+            <h2>📌 Las 3 cosas que necesita una IA para aprender</h2>
+            <ul style="font-size:1.1rem;">
+                <li><strong>Datos:</strong> son los ejemplos (imágenes, palabras, sonidos). Son la materia prima del
+                    aprendizaje. Incluyen ejemplos como imágenes, textos, sonidos o cualquier tipo de información que la
+                    IA pueda analizar. Sin datos, la IA no tiene de dónde extraer conocimiento.</li>
+                <li><strong>Algoritmos:</strong> Son los procedimientos o reglas que permiten a la IA
+                    identificar patrones dentro de los datos. Funcionan como la “lógica” que transforma información en
+                    conocimiento.</li>
+                <li><strong>Práctica:</strong> La IA mejora su desempeño al entrenarse muchas veces, corrigiendo errores
+                    y afinando sus predicciones con cada iteración.</li>
             </ul>
-            <img src="assets/img/cerebro-vs-ia.png" alt="Cerebro vs IA"
-                style="width:100%; border-radius:12px; margin:1.5rem 0;">
+            <section id="cerebro">
+                <img src="assets/img/cerebro-vs-ia.png" alt="Cerebro vs IA"
+                    style="width:50%; border-radius:12px; margin:1.5rem 0;">
+                <div class="steps">
+                    <div class="step"><strong>1) Datos:</strong> Fotos, textos o sonidos.</div>
+                    <div class="step"><strong>2) Reglas:</strong> El algoritmo analiza patrones.</div>
+                    <div class="step"><strong>3) Práctica:</strong> La IA mejora con el tiempo.</div>
+                </div>
+
+
+            </section>
         </div>
 
+        <!-- Tipos de IA -->
         <div class="card">
-            <h2>Tipos de IA que existen hoy</h2>
-            <p><strong>IA Débil:</strong> solo hace una cosa bien (Siri, traductor)</p>
-            <p><strong>IA Generativa:</strong> crea cosas nuevas (ChatGPT, imágenes con IA)</p>
-            <p><strong>IA General:</strong> aún no existe (sería como un humano)</p>
+            <h2>🧠 Tipos de Inteligencia Artificial en la actualidad</h2>
+            <p><strong>IA Débil:</strong> Se especializa en una sola tarea concreta. No “piensa” fuera de su función.
+                Ejemplos: asistentes virtuales como Siri, calculadoras inteligentes o sistemas de recomendación en
+                Netflix.</p>
+            <p><strong>IA Generativa:</strong> Capaz de crear contenido nuevo a partir de lo que ha aprendido: textos,
+                imágenes, música, código y más. Ejemplos: ChatGPT para lenguaje, DALL·E o MidJourney para arte digital.
+            </p>
+            <p><strong>IA General:</strong> Aún no existe, pero sería una IA con capacidad de razonar, aprender y
+                adaptarse como un ser humano, resolviendo problemas en múltiples áreas sin necesidad de entrenamiento
+                específico.</p>
         </div>
-
-        <div class="card game-box">
-            <h2 class="gold">🎮 Juego rápido</h2>
-            <p><strong>¿ChatGPT es IA Débil, Generativa o General?</strong></p>
-            <button
-                onclick="document.getElementById('res1').innerHTML='¡Correcto! 🎉 Es generativa porque crea textos nuevos.'; this.style.background='#16a34a'">Generativa</button>
-            <button
-                onclick="document.getElementById('res1').innerHTML='No, esa hace tareas muy específicas.'">Débil</button>
-            <button onclick="document.getElementById('res1').innerHTML='Aún no existe una así.'">General</button>
-            <p id="res1" style="margin-top:1rem; font-weight:bold;"></p>
+        <div id="fin" class="card">
+            <img src="assets/img/bloque1est/tiposIa.png" alt="">
         </div>
+        <!-- ==========================================
+     EXAMEN PRÁCTICO DE IA — 8 PREGUNTAS
+=========================================== -->
 
-        <div class="card text-center">
-            <a href="bloque2-estudiante.html" class="btn btn-student">Siguiente: Bloque 2 →</a>
-        </div>
-    </div>
-</body>
+        <section class="quiz-section">
+            <h2>Examen práctico: Conceptos básicos de IA</h2>
+            <p>Responde todas las preguntas. Necesitas al menos 80% para avanzar.</p>
 
-</html>
+            <form id="quizForm">
+
+                <!-- 1 -->
+                <div class="quiz-card">
+                    <h3>1. ¿Qué necesita la IA para aprender?</h3>
+                    <label><input type="radio" name="q1" value="correct"> Datos, algoritmos y práctica</label>
+                    <label><input type="radio" name="q1" value="wrong"> Solo datos</label>
+                    <label><input type="radio" name="q1" value="wrong"> Solo internet</label>
+                </div>
+
+                <!-- 2 -->
+                <div class="quiz-card">
+                    <h3>2. ¿Qué es un algoritmo?</h3>
+                    <label><input type="radio" name="q2" value="correct"> Un conjunto de reglas para resolver
+                        problemas</label>
+                    <label><input type="radio" name="q2" value="wrong"> Una computadora muy rápida</label>
+                    <label><input type="radio" name="q2" value="wrong"> Un programa para dibujar</label>
+                </div>
+
+                <!-- 3 -->
+                <div class="quiz-card">
+                    <h3>3. ¿Qué hace el aprendizaje automático?</h3>
+                    <label><input type="radio" name="q3" value="correct"> Permite que la IA mejore con más
+                        práctica</label>
+                    <label><input type="radio" name="q3" value="wrong"> Hace que la IA juegue videojuegos</label>
+                    <label><input type="radio" name="q3" value="wrong"> Cambia el color de la IA</label>
+                </div>
+
+                <!-- 4 -->
+                <div class="quiz-card">
+                    <h3>4. ¿Qué son los datos?</h3>
+                    <label><input type="radio" name="q4" value="correct"> Información que la IA usa para
+                        aprender</label>
+                    <label><input type="radio" name="q4" value="wrong"> Solo imágenes</label>
+                    <label><input type="radio" name="q4" value="wrong"> Archivos secretos</label>
+                </div>
+
+                <!-- 5 -->
+                <div class="quiz-card">
+                    <h3>5. ¿Cuál es un ejemplo real de IA?</h3>
+                    <label><input type="radio" name="q5" value="correct"> Un asistente como ChatGPT</label>
+                    <label><input type="radio" name="q5" value="wrong"> Un lápiz</label>
+                    <label><input type="radio" name="q5" value="wrong"> Un libro vacío</label>
+                </div>
+
+                <!-- 6 -->
+                <div class="quiz-card">
+                    <h3>6. ¿Para qué sirven los algoritmos en IA?</h3>
+                    <label><input type="radio" name="q6" value="correct"> Para encontrar patrones en los datos</label>
+                    <label><input type="radio" name="q6" value="wrong"> Para decorar la computadora</label>
+                    <label><input type="radio" name="q6" value="wrong"> Para borrar información</label>
+                </div>
+
+                <!-- 7 -->
+                <div class="quiz-card">
+                    <h3>7. ¿Qué pasa si la IA recibe malos datos?</h3>
+                    <label><input type="radio" name="q7" value="correct"> Aprenderá cosas incorrectas</label>
+                    <label><input type="radio" name="q7" value="wrong"> Se apaga sola</label>
+                    <label><input type="radio" name="q7" value="wrong"> Deja de funcionar internet</label>
+                </div>
+
+                <!-- 8 -->
+                <div class="quiz-card">
+                    <h3>8. ¿Por qué la práctica es importante para una IA?</h3>
+                    <label><input type="radio" name="q8" value="correct"> Porque mejora con cada intento</label>
+                    <label><input type="radio" name="q8" value="wrong"> Porque necesita descansar</label>
+                    <label><input type="radio" name="q8" value="wrong"> Porque cambia sus colores</label>
+                </div>
+
+                <button type="button" class="btn-student" onclick="calificarQuiz()">Calificar</button>
+            </form>
+
+            <div id="resultado">
+
+            </div>
+            <div id="resultadoMensaje">
+
+            </div>
+
+            <div id="siguienteBloque" class="hidden">
+                <div class="card text-center">
+                    <a href="bloque2-estudiante.html" class="btn-student">Siguiente: Bloque 2 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================
+               JS
+================================ -->
+        <script>
+            function calificarQuiz() {
+                const form = document.getElementById("quizForm");
+                let correct = 0;
+                let total = 8;
+
+                const respuestas = form.querySelectorAll("input[type='radio']:checked");
+                respuestas.forEach(r => { if (r.value === "correct") correct++; });
+
+                let score = (correct / total) * 100;
+
+                document.getElementById("resultado").innerHTML =
+                    `<p>Obtuviste <strong>${score}%</strong></p>`;
+
+                // BLANQUEAR respuestas después de evaluar
+                const radios = form.querySelectorAll("input[type='radio']");
+                radios.forEach(r => r.checked = false);
+
+                // Mostrar el botón de siguiente bloque si saca más de 80%
+                const siguiente = document.getElementById("siguienteBloque");
+                if (score >= 80) {
+                    siguiente.classList.remove("hidden");
+                    document.getElementById("resultadoMensaje").innerHTML =
+                        `<p>!!!Felicidades puedes al siguiente bloque 🤯!!!</p>`;
+                } else {
+                    siguiente.classList.add("hidden");
+                    document.getElementById("resultadoMensaje").innerHTML =
+                        `<p>No podras pasar al siguiente bloque 😢</p>`;
+
+                }
+            }
+        </script>
+
+        <!-- ================================
+               CSS
+================================ -->
+        <style>
+            .quiz-section {
+                background: #fff;
+                padding: 25px;
+                border-radius: 18px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                margin-top: 30px;
+            }
+
+            .quiz-card {
+                background: #f5f8ff;
+                border-left: 6px solid #0b76ef;
+                padding: 18px;
+                margin-bottom: 20px;
+                border-radius: 12px;
+            }
+
+            .quiz-card h3 {
+                margin-bottom: 10px;
+                font-size: 17px;
+            }
+
+            .quiz-card label {
+                display: block;
+                margin-bottom: 8px;
+                cursor: pointer;
+            }
+
+            .btn-student {
+                background: #0b76ef;
+                color: #fff;
+                padding: 12px 22px;
+                border: none;
+                border-radius: 12px;
+                cursor: pointer;
+                font-size: 16px;
+                margin-top: 10px;
+                display: inline-block;
+                text-decoration: none;
+            }
+
+            .btn-student:hover {
+                background: #095fc0;
+            }
+
+            .card.text-center {
+                margin-top: 20px;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            #resultado {
+                margin-top: 15px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        </style>
