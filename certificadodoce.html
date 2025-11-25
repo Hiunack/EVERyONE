@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado Estudiante | EVERYONE</title>
+    <link rel="icon" href="ico.png">
+    <link rel="stylesheet" href="assets/css/headergenerico.css">
+    <style>
+        /* Fuentes tipográficas para un estilo formal de certificado */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+        :root {
+            --blue: #0b76ef;
+            /* Estudiante/Principal */
+            --dark-blue: #063a82;
+            --dark-text: #1e293b;
+            --bg: #f0f4f8;
+        }
+
+        header {
+            background-image: url(estampado2.png);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg);
+            color: var(--dark-text);
+            padding-top: 100px;
+        }
+
+        /* Estilos del Header (Oculto en impresión) */
+
+
+
+
+
+        #logoeveryone {
+            width: 200px;
+            height: auto;
+            max-width: 300px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+
+            text-align: center;
+            margin-top: 0px;
+        }
+
+        /* Formulario y Botones */
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .btn-form {
+            background: var(--blue);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn-print {
+            background: #fbbf24;
+            color: var(--dark-text);
+            max-width: 400px;
+            font-size: 1.2rem;
+        }
+
+        /* --- Estilos del Certificado (Ajustados para una sola página) --- */
+        #certificate-container {
+            display: none;
+
+            padding: 20px;
+            border: 5px solid var(--blue);
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            min-height: 550px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .logo-cert {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        .certificate-header {
+            color: var(--blue);
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 0.2rem;
+            padding-bottom: 5px;
+        }
+
+        .certificate-role {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+
+        .certificate-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--dark-text);
+            margin: 15px 0;
+            text-decoration: underline;
+        }
+
+        .certificate-body {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+
+        .signature-block {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .signature {
+            border-top: 1px solid #333;
+            width: 30%;
+            padding-top: 5px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* --- CORRECCIÓN CLAVE DE IMPRESIÓN --- */
+        @media print {
+
+            header,
+            #input-container,
+            #print-button,
+            .center a,
+            /* SECCIÓN AÑADIDA: Ocultar el h1 fuera del certificado */
+            .container>h1 {
+                display: none !important;
+            }
+
+            body {
+                padding-top: 0;
+                background: white !important;
+                margin: 0;
+
+                /* IMPORTANTE: Establecer el tamaño de la página de impresión a horizontal (landscape) */
+                @page {
+                    size: landscape;
+                    margin: 10mm;
+                }
+            }
+
+            #certificate-container {
+                display: block !important;
+                width: 100%;
+                max-width: 100%;
+                min-height: 90vh;
+                border: none;
+                box-shadow: none;
+                padding: 10mm;
+                transform: scale(0.98);
+                transform-origin: top left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logoeveryone" src="assets/img/logo.png.png" alt="Logo EVERYONE">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <h5>|</h5>
+            <a href="about.html">Sobre el proyecto</a>
+        </nav>
+    </header>
+
+    <div class="container" style="padding:40px 20px;">
+        <h1 style="color:var(--blue);font-size:2.5rem;">Genera tu Certificado de Estudiante</h1>
+
+        <div id="input-container" class="card">
+            <h2>Ingresa tus Datos</h2>
+            <form id="input-form">
+                <label for="userName" style="font-weight: bold;">Nombre Completo:</label>
+                <input type="text" id="userName" required placeholder="Ej. Ana García Pérez"
+                    style="padding:10px; margin-bottom:20px; border:1px solid #ccc; border-radius:8px; width:100%; box-sizing:border-box;">
+
+                <button type="button" class="btn-form" onclick="generateCertificate()">Generar Vista Previa</button>
+            </form>
+        </div>
+
+        <div id="certificate-container">
+            <img src="assets/img/logo.png.png" alt="Logo EVERYONE" class="logo-cert">
+
+            <h1 class="certificate-header">Certificado de Reconocimiento</h1>
+
+            <p style="font-size:1.1rem; color:#666; margin-bottom: 5px;">Otorgado a:</p>
+            <p class="certificate-name" id="cert-name">[NOMBRE DEL ESTUDIANTE]</p>
+
+            <p class="certificate-role" id="cert-role">DOCENTE DESTACADO</p>
+
+            <div class="certificate-body" id="cert-message">
+            </div>
+
+            <p style="font-weight:700; color: var(--dark-blue); font-size:1.1rem;">
+                <span id="cert-aval">Este certificado avala la participación y finalización exitosa de todos los módulos
+                    del programa de alfabetización digital en Inteligencia Artificial 'EVERYONE'.</span>
+            </p>
+
+            <div class="signature-block">
+                <div class="signature">
+                    Firma del Participante
+                </div>
+                <div class="signature">
+                    Coordinación del Proyecto EVERYONE
+                </div>
+            </div>
+
+            <p style="font-style: italic; margin-top: 40px; font-size: 0.9rem; color: #666;">
+                Emitido hoy, <span id="current-date"></span>.
+            </p>
+
+            <img src="assets/img/logo_watermark.png" alt="Marca de Agua"
+                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.08; width: 60%; max-width: 500px; z-index: 0;">
+        </div>
+
+        <div id="print-button" style="text-align:center; margin-top:30px; display:none;">
+            <button class="btn-form btn-print" onclick="printCertificate()">
+                🖨️ Imprimir Certificado
+            </button>
+        </div>
+
+        <div class="center" style="margin-top:2rem;">
+            <a class="btn-form" href="#" onclick="window.scrollTo({top:0, behavior:'smooth'})"
+                style="background:#ccc; color:#333; max-width: 300px;">Volver arriba</a>
+        </div>
+    </div>
+
+    <script>
+        function generateCertificate() {
+            const userName = document.getElementById('userName').value.trim();
+            const certName = document.getElementById('cert-name');
+            const certMessage = document.getElementById('cert-message');
+            const certContainer = document.getElementById('certificate-container');
+            const printBtnDiv = document.getElementById('print-button');
+            const currentDateSpan = document.getElementById('current-date');
+
+            if (!userName) {
+                alert('⚠️ Por favor, ingresa tu nombre completo.');
+                return;
+            }
+
+            // 1. Establecer el nombre y la fecha
+            certName.textContent = userName.toUpperCase();
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            currentDateSpan.textContent = today.toLocaleDateString('es-ES', options);
+
+            // 2. Mensaje específico de Estudiante
+            const messageHTML = `
+                <p>Habiendo demostrado un compromiso sobresaliente con el desarrollo de la ciudadanía digital y las habilidades del siglo XXI, se reconoce a <strong>${userName}</strong> por completar con éxito el programa de Introducción a la Inteligencia Artificial.</p>
+                <p style="font-style:italic; margin-top:20px;">"Ahora entiendo que la IA es una herramienta poderosa que me ayuda a pensar de forma crítica. ¡Estoy listo para usarla de manera ética e inteligente!"</p>
+            `;
+            certMessage.innerHTML = messageHTML;
+
+            // 3. Mostrar el certificado y el botón de impresión
+            certContainer.style.display = 'block';
+            printBtnDiv.style.display = 'block';
+
+            // Desplazarse al certificado
+            certContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function printCertificate() {
+            window.print();
+        }
+    </script>
+</body>
+
+</html>
