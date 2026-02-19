@@ -264,35 +264,21 @@
                 q5: 'correct'
             };
             const totalPreguntas = 5;
-            const umbralAprobacion = 4; // 4 de 5 para aprobar (80%)
+            const umbralAprobacion = 4; // 80%
 
             let score = 0;
             const form = document.getElementById("quizForm");
 
-            // 1. Calificar y aplicar estilos
             for (let i = 1; i <= totalPreguntas; i++) {
                 const qName = `q${i}`;
                 const quizCard = document.getElementById(`quiz-${qName}`);
                 const respuestaUsuario = form.querySelector(`input[name="${qName}"]:checked`);
                 const correcta = respuestasCorrectas[qName];
 
-                // Limpiar estilos anteriores
+                // Limpiar estilos previos sin borrar el contenido HTML
                 if (quizCard) {
                     quizCard.classList.remove('respuesta-correcta', 'respuesta-incorrecta');
-
-                    // Resetear strong en todas las etiquetas
-                    quizCard.querySelectorAll('label strong').forEach(strong => {
-                        const parent = strong.parentElement;
-                        parent.innerHTML = parent.textContent; // Eliminar la etiqueta strong
-                    });
                 }
-
-                // Marcar la respuesta correcta con strong
-                if (quizCard) {
-                    const correctaLabel = quizCard.querySelector(`input[value="${correcta}"]`).parentElement;
-                    correctaLabel.innerHTML = `<strong>${correctaLabel.innerHTML}</strong>`;
-                }
-
 
                 if (respuestaUsuario) {
                     if (respuestaUsuario.value === correcta) {
@@ -304,33 +290,26 @@
                 }
             }
 
-            // 2. Mostrar resultados
+            // Mostrar resultados
             const resultadoDiv = document.getElementById('resultado');
             const mensajeDiv = document.getElementById('resultadoMensaje');
             const aprobado = score >= umbralAprobacion;
 
-            resultadoDiv.innerHTML = `
-                <p>Tu puntuación: <strong>${score} de ${totalPregun + tas}</strong>.</p>
-            
-            `;
+
+            resultadoDiv.innerHTML = `<p>Tu puntuación: <strong>${score} de ${totalPreguntas}</strong>.</p>`;
 
             if (aprobado) {
                 mensajeDiv.innerHTML = `
-                    <p style="color: green; font-size:1.1rem;">¡Excelente! Tienes los conocimientos básicos. ¡Adelante con la Ética!</p>
-                    <div class="text-center" style="margin-top:1rem;">
-                        <a href="bloque3-estudiante.html" class="btn-student">Siguiente: Bloque 3 (Ética) →</a>
-                    </div>
-                `;
+                <p style="color: green; font-size:1.1rem;">¡Excelente! Tienes los conocimientos básicos. ¡Adelante con la Ética!</p>
+                <div class="text-center" style="margin-top:1rem;">
+                    <a href="bloque3-estudiante.html" class="btn-student">Siguiente: Bloque 3 (Ética) →</a>
+                </div>`;
             } else {
                 mensajeDiv.innerHTML = `
-                    <p style="color: red; font-size:1.1rem;">😢 ¡Sigue practicando! Revisa la información e inténtalo de nuevo para obtener ${umbralAprobacion} puntos.</p>
-                `;
+                <p style="color: red; font-size:1.1rem;">😢 ¡Sigue practicando! Revisa la información e inténtalo de nuevo para obtener ${umbralAprobacion} puntos.</p>`;
             }
 
-            // Mover el scroll hacia la sección de resultados
-            document.getElementById('evaluacion').scrollIntoView({
-                behavior: 'smooth'
-            });
+            document.getElementById('evaluacion').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </body>
