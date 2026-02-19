@@ -522,8 +522,8 @@
             const aprobadoAmbos = aprobado1 && aprobado2;
 
             let mensajeHTML = `
-                <p><strong>Examen 1 (Múltiple):</strong> ${score1} de ${preguntasExamen1} (Necesitas ${umbralExamen1}). ${aprobado1 ? '✅ Aprobado' : '❌ Reprobado'}</p>
-                <p><strong>Examen 2 (F/V):</strong> ${score2} de ${preguntasExamen2} (Necesitas ${umbralExamen2}). ${aprobado2 ? '✅ Aprobado' : '❌ Reprobado'}</p>
+                <p><strong>Examen 1 (Múltiple):</strong> ${score1} de ${preguntasExamen1}. ${aprobado1 ? '✅ Aprobado' : '❌ Reprobado'}</p>
+                <p><strong>Examen 2 (F/V):</strong> ${score2} de ${preguntasExamen2}. ${aprobado2 ? '✅ Aprobado' : '❌ Reprobado'}</p>
             `;
 
             if (aprobadoAmbos) {
